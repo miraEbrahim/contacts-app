@@ -4,8 +4,6 @@ import escapeRegExp from "escape-string-regexp";
 import sortBy from "sort-by";
 
 class ListContacts extends Component {
-  
-
   state = {
     query: ""
   };
@@ -41,7 +39,6 @@ class ListContacts extends Component {
             value={this.state.query}
             onChange={event => this.updateQuery(event.target.value)}
           />
-          
         </div>
 
         {showingContacts.length !== contacts.length && (
@@ -54,18 +51,19 @@ class ListContacts extends Component {
         )}
         <ol className="contact-list">
           {showingContacts.map(contact => (
-            <li key="{contact.name}"> {contact.name}
-                    <div className='contact-list-details'>
-                        <p>{contact.phone_number}</p>
-                        <p>{contact.address}</p>
-                    </div>
-                    </li>
+            <li key="{contact.name}">
+              {" "}
+              {contact.name}
+              <div className="contact-list-details">
+                <p>{contact.phone_number}</p>
+                <p>{contact.address}</p>
+              </div>
+            </li>
           ))}
         </ol>
       </div>
     );
   }
 }
-
 
 export default ListContacts;

@@ -1,19 +1,17 @@
-import React, { Component} from 'react';
-import { contacts } from './contacts'
-import ListContact from './ListContacts';
-
-
+import React, { Component } from "react";
+import { contacts } from "./contacts";
+import ListContact from "./ListContacts";
 
 class App extends Component {
   state = {
     contacts: contacts
-  }
+  };
   render() {
-    return(
+    return (
       <div className="App">
-        <ListContact contacts={this.state.contacts}/>
+        <ListContact contacts={this.state.contacts} />
       </div>
-    )
+    );
   }
 }
 export default App;
