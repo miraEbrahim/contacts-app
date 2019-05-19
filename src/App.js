@@ -1,8 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component} from 'react';
+import { contacts } from './contacts'
+import ListContact from './ListContacts';
 
-function App() {
+
+
+class App extends Component {
+  render() {
+    return(
+      <div className="App">
+        <ListContact contacts={contacts}/>
+      </div>
+    )
+  }
 }
-
 export default App;
