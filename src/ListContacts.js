@@ -9,7 +9,7 @@ import "./index.css";
 class ListContacts extends Component {
   state = {
     query: "",
-    address:""
+    address: ""
   };
 
   updateQuery = query => {
@@ -51,66 +51,67 @@ class ListContacts extends Component {
     showingAddress.sort(sortBy("address"));
     return (
       <div className="list-contacts">
-      <div className="search-bar">
-        <div className="input-group mb-3">
-          <div className="input-group-prepend">
-            <span className="green-input" id="inputGroup-sizing-default">
-              Search Contacts
-            </span>
-          </div>
-          <input
-            aria-label=""
-            aria-describedby="basic-addon1"
-            className="form-control"
-            type="text"
-            placeholder="by name"
-            value={this.state.query}
-            onChange={event => this.updateQuery(event.target.value)}
-          />
+        <div className="search-bar">
+          <div className="input-group mb-3">
+            <div className="input-group-prepend">
+              <span className="green-input" id="inputGroup-sizing-default">
+                Search Contacts
+              </span>
+            </div>
+            <input
+              aria-label=""
+              aria-describedby="basic-addon1"
+              className="form-control"
+              type="text"
+              placeholder="by name"
+              value={this.state.query}
+              onChange={event => this.updateQuery(event.target.value)}
+            />
+            <input
+              aria-label=""
+              aria-describedby="basic-addon1"
+              className="form-control"
+              type="text"
+              placeholder="by address"
+              value={this.state.address}
+              onChange={event => this.updateAddress(event.target.value)}
+            />
           </div>
         </div>
-        <div className="input-group mb-3">
-        <div className="input-group-prepend">
-        <span className="green-input" id="inputGroup-sizing-default">
-          Search Contacts
-        </span>
-      </div>
-      <input
-      aria-label=""
-      aria-describedby="basic-addon1"
-      className="form-control"
-      type="text"
-      placeholder="by address"
-      value={this.state.address}
-      onChange={event => this.updateAddress(event.target.value)}
-    />
-    </div>
-   
 
         {showingContacts.length !== contacts.length && (
           <div className="grey-text">
             <span>
-              Now Showing {showingContacts.length} of {contacts.length} total
+              Now Showing {showingContacts.length} matching contacts names of{" "}
+              {contacts.length} total contacts
             </span>
-            <button className="green-button" onClick={this.clearQuery}>Show All</button>
+            <button className="green-button" onClick={this.clearQuery}>
+              Show All
+            </button>
           </div>
         )}
+
         <div className="container">
           <div className="row">
             {showingContacts.map(contact => (
               <li key="{contact.name}">
-              <div className="card">
-          <div className="card-body">
-                <h2 className="card-title mb-2 green-text">{contact.name}</h2>
-                <h6 className="card-subtitle mt-3 mb-2 grey-text">{contact.phone_number}</h6>
-                <h5 className="card-text mb-2 grey-text">{contact.address}</h5>
-                </div>
+                <div className="card">
+                  <div className="card-body">
+                    <h2 className="card-title mb-2 green-text">
+                      {contact.name}
+                    </h2>
+                    <p className=" mt-3 mb-2 grey-text card-text">
+                      {contact.phone_number}
+                    </p>
+                    <p className="card-text mb-2 grey-text">
+                      {contact.address}
+                    </p>
+                  </div>
                 </div>
               </li>
             ))}
           </div>
         </div>
-        
       </div>
     );
   }
