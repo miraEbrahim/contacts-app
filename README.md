@@ -1,17 +1,48 @@
+
+## Phonebook Interface - Beginner Version
+
+##Challenge Overview
+The task is to build a single page application that will play the role of a phone book.
+
+#Requirements
+
+1. Use this api to get the data you need: http://www.mocky.io/v2/581335f71000004204abaf83 
+
+2. Display all the contacts and add basic filters for searching and sorting 
+
+3. Describe in a readme file how to run your application  
+
+#Recommendation
+We strongly recommend you use frameworks to solve the challenge if you added frameworks to your hackajob profile.
+
+##How to Run the Phonebook Interface Application
+
+##Overview
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Steps
+1. Download or Clone Git repository
 
-In the project directory, you can run:
+###'cd folder/to/clone-into/'
+###'git clone https://github.com/gittower/https://github.com/miraEbrahim/contacts-app.git'
 
+2. Install project's dependencies and libraries 
+
+In the project directory, 
+###'npm install'
+
+3. Run the Application
+
+In the project directory,
 ### `npm start`
 
-Runs the app in the development mode.<br>
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+## Other Available Scripts
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>

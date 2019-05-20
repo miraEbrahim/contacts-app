@@ -21,7 +21,7 @@ class App extends Component {
       <div className="row">
         <div className="col-md-12">
           <h1 className="text-capitalize text-center green-text mt-4">
-            phone book App
+          Phonebook Interface - Beginner Version
           </h1>
           <ListContact contacts={this.state.contacts} />
         </div>
