@@ -23,13 +23,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Steps
 1. Download or Clone Git repository
 
-### 'cd folder/to/clone-into/'
-### 'git clone https://github.com/gittower/https://github.com/miraEbrahim/contacts-app.git'
+### `cd folder/to/clone-into/`
+### `git clone https://github.com/gittower/https://github.com/miraEbrahim/contacts-app.git`
 
 2. Install project's dependencies and libraries 
 
 In the project directory, 
-### 'npm install'
+### `npm install`
 
 3. Run the Application
 
